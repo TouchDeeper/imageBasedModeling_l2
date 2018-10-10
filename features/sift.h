@@ -127,7 +127,7 @@ public:
         /** Octave index of the keypoint. Can be negative. */
         int octave;
         /** Sample index. Initally integer in {0 ... S-1}, later in [-1,S]. */
-        float sample;
+        float sample;//有效高斯差分的序号
         /** Keypoint x-coordinate. Initially integer, later sub-pixel. */
         float x;
         /** Keypoint y-coordinate. Initially integer, later sub-pixel. */
