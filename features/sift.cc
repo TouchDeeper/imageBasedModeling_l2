@@ -426,7 +426,7 @@ Sift::keypoint_localization (void)
             math::Vec3f b(-Dx, -Dy, -Ds);
 
 
-            math::Vec3f delta;
+            //math::Vec3f delta;
             /****************************task-1-1  求解偏移量deta ******************************/
             /*
              * 参考第30页slide delta_x的求解方式 delta_x = inv(H)*b
@@ -437,14 +437,14 @@ Sift::keypoint_localization (void)
             /**********************************************************************************/
 
 
-            //math::Vec3f delta = H_inv * b;
+            math::Vec3f delta = H_inv * b;
             delta_x = delta[0];
             delta_y = delta[1];
             delta_s = delta[2];
 
 
             /* Check if accurate location is far away from pixel center. */
-            // dx =0 表示|dx|>0.6f
+            // dx =0 表示|dx|>0.6f,如果大于的话，就证明离另一个像素点比较近，就用近的像素点重新计算一次
             int dx = (delta_x > 0.6f && ix < w-2) * 1 + (delta_x < -0.6f && ix > 1) * -1;
             int dy = (delta_y > 0.6f && iy < h-2) * 1 + (delta_y < -0.6f && iy > 1) * -1;
 
@@ -473,7 +473,7 @@ Sift::keypoint_localization (void)
           * D--为一阶导数，表示为(Dx, Dy, Ds)
           * 请给出求解val的代码
           */
-        float val = 0.0;
+        //float val = 0.0;
         /*                  */
         /*    此处添加代码    */
         /*                  */
@@ -481,7 +481,7 @@ Sift::keypoint_localization (void)
 
 
 
-        //float val = dogs[1]->at(ix, iy, 0) + 0.5f * (Dx * delta_x + Dy * delta_y + Ds * delta_s);
+        float val = dogs[1]->at(ix, iy, 0) + 0.5f * (Dx * delta_x + Dy * delta_y + Ds * delta_s);
         /* Calcualte edge response score Tr(H)^2 / Det(H), see Section 4.1. */
          /**************************去除边缘点，参考第33页slide 仔细阅读代码 ****************************/
         float hessian_trace = Dxx + Dyy;
@@ -582,10 +582,12 @@ Sift::descriptor_generation (void)
         }
 
         /* Orientation assignment. This returns multiple orientations. */
+        //统计直方图找到特征点的几个主方向
         std::vector<float> orientations;
         orientations.reserve(8);
         this->orientation_assignment(kp, octave, orientations);
 
+        //生成特征向量，同一个特征点可能有多个描述子，为了提升匹配的稳定性
         /* Feature vector extraction. */
         for (std::size_t j = 0; j < orientations.size(); ++j)
         {

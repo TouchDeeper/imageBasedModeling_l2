@@ -63,7 +63,7 @@ public:
          * down scaled by factors of two. This can be set to -1, which
          * expands the original image by a factor of two.
          */
-         // min_octave设置为-1表示图像
+         // min_octave设置为-1表示图像需要进行上采样
         int min_octave;
 
         /**
