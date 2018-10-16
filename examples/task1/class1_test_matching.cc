@@ -108,7 +108,7 @@ feature_set_matching (core::ByteImage::Ptr image1, core::ByteImage::Ptr image2)
     //feature_set_opts.surf_opts.verbose_output = true;
     //feature_set_opts.surf_opts.contrast_threshold = 500.0f;
 
-    // 计算第一幅图像的SIT和SURF特征点
+    // 计算第一幅图像的SIFT和SURF特征点
     sfm::FeatureSet feat1(feature_set_opts);
     feat1.compute_features(image1);
     // 计算第二幅图像的SIFT和SURF特征点
@@ -138,7 +138,7 @@ feature_set_matching (core::ByteImage::Ptr image1, core::ByteImage::Ptr image2)
         sift_descr2.data()->begin(), sift_descr2.size(),
         &sift_matching);
 
-    // 去除不一致的匹配对，匹配对feature1和feature2是一致的需要满足，feature1的最近邻居
+    // 去除不一致的匹配对，匹配对feature1和feature2是一致的需要满足，feature1的最近邻
     // 是feature2，feature2的最近邻是feature1
     sfm::Matching::remove_inconsistent_matches(&sift_matching);
     std::cout << "Consistent Sift Matches: "
@@ -223,7 +223,7 @@ feature_set_matching (core::ByteImage::Ptr image1, core::ByteImage::Ptr image2)
 
     core::ByteImage::Ptr match_image = visualize_matching(
         matching, image1, image2, feat1.positions, feat2.positions);
-    std::string output_filename = "./tmp/matching_featureset.png";
+    std::string output_filename = "./tmp/matching_featureset_lowe-ratio.png";
     std::cout << "Saving visualization to " << output_filename << std::endl;
     core::image::save_file(match_image, output_filename);
 }

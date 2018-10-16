@@ -170,10 +170,10 @@ Matching::oneway_match (Options const& options,
 
 
 
-//        if (static_cast<float>(nn_result.dist_1st_best)
-//            / static_cast<float>(nn_result.dist_2nd_best)
-//            > square_lowe_thres)
-//            continue;
+        if (static_cast<float>(nn_result.dist_1st_best)
+            / static_cast<float>(nn_result.dist_2nd_best)
+            > square_lowe_thres)
+            continue;
         // 匹配成功，feature set1 中第i个特征值对应feature set2中的第index_1st_best个特征点
         result->at(i) = nn_result.index_1st_best;
     }
