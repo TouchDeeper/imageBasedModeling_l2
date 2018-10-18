@@ -2,16 +2,17 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_p3p" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_ba" />
-      <config projectName="ImageBasedModellingEdu" targetName="task1_test_features" />
-      <config projectName="ImageBasedModellingEdu" targetName="features" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_triangle" />
-      <config projectName="ImageBasedModellingEdu" targetName="task1_test_matching" />
       <config projectName="ImageBasedModellingEdu" targetName="sfm" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_homography" />
-      <config projectName="ImageBasedModellingEdu" targetName="util" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_8_point" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_pose_from_fundamental" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_math_basic" />
+      <config projectName="ImageBasedModellingEdu" targetName="features" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_features" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_ransac" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_camera_model" />
       <config projectName="ImageBasedModellingEdu" targetName="core" />
+      <config projectName="ImageBasedModellingEdu" targetName="util" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_matching" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -22,6 +23,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2676baa4-d72c-4f51-b2a8-305149c9dd01" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_camera.cc" afterPath="$PROJECT_DIR$/examples/task2/class2_test_camera.cc" />
+      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc" afterPath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc" />
+      <change beforePath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc" afterPath="$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,40 +38,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="matching_base.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/matching_base.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="class1_test_features.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_features.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-630">
-              <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="matching.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/matching.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="class1_test_matching.cc" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_matching.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="0">
               <caret line="168" column="23" lean-forward="false" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
               <folding>
                 <element signature="e#8139#8184#0" expanded="true" />
@@ -83,38 +57,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feature_set.cc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sfm/feature_set.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="73" column="34" lean-forward="false" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="matching.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/matching.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="3096">
               <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="175" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matching_featureset_lowe-ratio.png" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matching_featureset_lowe-ratio.png" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tmp/matching_featureset_lowe-ratio.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="surf.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/surf.h">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_fundamental_8_point.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_math_basic.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_math_basic.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_camera.cc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_camera.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="122" column="24" lean-forward="false" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class2_test_fundamental_ransac.cc" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -154,9 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/features/matching.cc" />
-        <option value="$PROJECT_DIR$/examples/_test_matching.cc" />
-        <option value="$PROJECT_DIR$/examples/_test_homography.cc" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/examples/_test_triangle.cc" />
         <option value="$PROJECT_DIR$/examples/_test_p3p.cpp" />
@@ -205,6 +206,9 @@
         <option value="$PROJECT_DIR$/features/sift.cc" />
         <option value="$PROJECT_DIR$/examples/task1/class1_test_matching.cc" />
         <option value="$PROJECT_DIR$/features/matching.h" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_camera.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc" />
+        <option value="$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc" />
       </list>
     </option>
   </component>
@@ -256,17 +260,7 @@
               <item name="ImageBasedModellingEdu" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="task1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ImageBasedModellingEdu" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ImageBasedModellingEdu" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
+              <item name="task2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,7 +288,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.task1_test_matching">
+  <component name="RunManager" selected="Application.task2_test_fundamental_8_point">
     <configuration name="features" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="features" CONFIG_NAME="Debug">
       <envs />
     </configuration>
@@ -307,31 +301,35 @@
     <configuration name="task1_test_matching" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/kxm1.jpg ./examples/data/kxm2.jpg" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task1_test_matching" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task1_test_matching">
       <envs />
     </configuration>
-    <configuration name="task2_test_ba" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_ba" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_ba">
+    <configuration name="task2_test_camera_model" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_camera_model" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_camera_model">
       <envs />
     </configuration>
-    <configuration name="task2_test_homography" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_homography" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_homography">
+    <configuration name="task2_test_fundamental_8_point" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_fundamental_8_point" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_fundamental_8_point">
       <envs />
     </configuration>
-    <configuration name="task2_test_p3p" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_p3p" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_p3p">
+    <configuration name="task2_test_fundamental_ransac" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_fundamental_ransac" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_fundamental_ransac">
       <envs />
     </configuration>
-    <configuration name="task2_test_triangle" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_triangle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_triangle">
+    <configuration name="task2_test_math_basic" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_math_basic" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_math_basic">
+      <envs />
+    </configuration>
+    <configuration name="task2_test_pose_from_fundamental" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task2_test_pose_from_fundamental" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task2_test_pose_from_fundamental">
       <envs />
     </configuration>
     <configuration name="util" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
-    <list size="9">
+    <list size="10">
       <item index="0" class="java.lang.String" itemvalue="Application.task1_test_features" />
-      <item index="1" class="java.lang.String" itemvalue="Application.task2_test_homography" />
-      <item index="2" class="java.lang.String" itemvalue="Application.util" />
-      <item index="3" class="java.lang.String" itemvalue="Application.task2_test_p3p" />
-      <item index="4" class="java.lang.String" itemvalue="Application.task1_test_matching" />
-      <item index="5" class="java.lang.String" itemvalue="Application.features" />
-      <item index="6" class="java.lang.String" itemvalue="Application.task2_test_ba" />
-      <item index="7" class="java.lang.String" itemvalue="Application.task2_test_triangle" />
-      <item index="8" class="java.lang.String" itemvalue="Application.sfm" />
+      <item index="1" class="java.lang.String" itemvalue="Application.util" />
+      <item index="2" class="java.lang.String" itemvalue="Application.task1_test_matching" />
+      <item index="3" class="java.lang.String" itemvalue="Application.task2_test_camera_model" />
+      <item index="4" class="java.lang.String" itemvalue="Application.task2_test_fundamental_8_point" />
+      <item index="5" class="java.lang.String" itemvalue="Application.task2_test_fundamental_ransac" />
+      <item index="6" class="java.lang.String" itemvalue="Application.task2_test_math_basic" />
+      <item index="7" class="java.lang.String" itemvalue="Application.task2_test_pose_from_fundamental" />
+      <item index="8" class="java.lang.String" itemvalue="Application.features" />
+      <item index="9" class="java.lang.String" itemvalue="Application.sfm" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -362,21 +360,24 @@
       <workItem from="1539567357981" duration="662000" />
       <workItem from="1539596659719" duration="5092000" />
       <workItem from="1539651840862" duration="6580000" />
+      <workItem from="1539773888481" duration="1636000" />
+      <workItem from="1539828942482" duration="9174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125304000" />
+    <option name="totallyTimeSpent" value="136114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14231189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18371607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18371607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -421,30 +422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/math/vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sfm/ransac_fundamental.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/visualizer.cc" />
-    <entry file="file://$PROJECT_DIR$/examples/class2_test_triangle.cc" />
-    <entry file="file://$PROJECT_DIR$/examples/class2_test_p3p.cc" />
-    <entry file="file://$PROJECT_DIR$/sfm/extract_focal_length.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sfm/extract_focal_length.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -527,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/task1/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -559,7 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2628">
           <caret line="146" column="22" lean-forward="false" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14202">
           <caret line="789" column="0" lean-forward="false" selection-start-line="789" selection-start-column="0" selection-end-line="789" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2322">
           <caret line="129" column="14" lean-forward="false" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -611,9 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/matching_base.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
+        <state relative-caret-position="666">
           <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,35 +597,25 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/kxm2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/kxm2.png" />
     <entry file="file://$PROJECT_DIR$/sfm/feature_set.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="88" column="21" lean-forward="false" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/surf.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
+        <state relative-caret-position="2736">
           <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/kxm1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/kxm1.png" />
     <entry file="file://$PROJECT_DIR$/sfm/feature_set.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
+        <state relative-caret-position="1314">
           <caret line="73" column="34" lean-forward="false" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
           <folding />
         </state>
@@ -668,7 +623,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_features.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-630">
+        <state relative-caret-position="576">
           <caret line="32" column="64" lean-forward="false" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
           <folding />
         </state>
@@ -691,7 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/matching.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
+        <state relative-caret-position="0">
           <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
           <folding />
         </state>
@@ -704,7 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/task1/class1_test_matching.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
+        <state relative-caret-position="0">
           <caret line="168" column="23" lean-forward="false" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
           <folding>
             <element signature="e#8139#8184#0" expanded="true" />
@@ -714,7 +669,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/matching.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="3096">
           <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="175" selection-end-column="21" />
           <folding />
         </state>
@@ -723,6 +678,62 @@
     <entry file="file://$PROJECT_DIR$/tmp/matching_featureset_lowe-ratio.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/math/vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_camera.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="122" column="24" lean-forward="false" selection-start-line="122" selection-start-column="24" selection-end-line="122" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/math/matrix.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="52" column="6" lean-forward="false" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_math_basic.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_8_point.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="104" column="26" lean-forward="true" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/task2/class2_test_fundamental_ransac.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

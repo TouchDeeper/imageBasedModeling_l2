@@ -17,33 +17,33 @@ public:
 
         /*todo*/
         // 世界坐标系到相机坐标系
-        double xc = 0.0;
-        double yc = 0.0;
-        double zc = 0.0;
+        double xc = R_[0]*p3d[0]+R_[1]*p3d[1]+R_[2]*p3d[2]+t_[0];
+        double yc = R_[3]*p3d[0]+R_[4]*p3d[1]+R_[5]*p3d[2]+t_[1];
+        double zc = R_[6]*p3d[0]+R_[7]*p3d[1]+R_[8]*p3d[2]+t_[2];
 
-        // 相机坐标系到图像坐标系
-        double x = 0.0;
-        double y = 0.0;
+        // 相机坐标系到归一化坐标系
+        double x = xc/zc;
+        double y = yc/zc;
 
         double r2 = x*x + y*y;
         double distort_ratio = 1+ dist_[0]* r2+ dist_[1]*r2*r2;
 
         // 图像坐标系到屏幕坐标系
         math::Vec2d p;
-        p[0] = 0.0;
-        p[1] = 0.0;
+        p[0] = f_*distort_ratio*x;
+        p[1] = f_*distort_ratio*y;
 
         return p;
     }
 
-    // 相机在世界坐标中的位置 -R*t
+    // 相机在世界坐标中的位置 -R^T*t
     math::Vec3d pos_in_world(){
 
         math::Vec3d pos;
         /*todo*/
-        pos[0] = 0.0;
-        pos[1] = 0.0;
-        pos[2] = 0.0;
+        pos[0] = -(R_[0]*t_[0]+R_[3]*t_[1]+R_[6]*t_[2]);
+        pos[1] = -(R_[1]*t_[0]+R_[4]*t_[1]+R_[7]*t_[2]);
+        pos[2] = -(R_[2]*t_[0]+R_[5]*t_[1]+R_[8]*t_[2]);
         return pos;
     }
 
@@ -54,6 +54,9 @@ public:
         /*
          * todo
          */
+        dir[0] = R_[6];
+        dir[1] = R_[7];
+        dir[2] = R_[8];
         return dir;
     }
 public:

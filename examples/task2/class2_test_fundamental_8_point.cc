@@ -70,11 +70,26 @@ FundamentalMatrix fundamental_8_point (math::Matrix<double, 3, 8> const& points1
     math::Matrix<double, 8, 9> A;
 
     /*todo 构造矩阵 */
+    for (int i = 0; i < A.rows; ++i) {
+        double u1 = points1(0,i);
+        double u2 = points2(0,i);
+        double v1 = points1(1,i);
+        double v2 = points2(1,i);
+        A(i,0) = u1*u2;
+        A(i,1) = u1*v2;
+        A(i,2) = u1;
+        A(i,3) = v1*u2;
+        A(i,4) = v1*v2;
+        A(i,5) = v1;
+        A(i,6) = u2;
+        A(i,7) = v2;
+        A(i,8) = 1;
+    }
 
     /*奇异值分解*/
     math::Matrix<double, 9, 9> vv;
     math::matrix_svd<double, 8, 9>(A, nullptr, nullptr, &vv);
-    math::Vector<double, 9> f = vv.col(8);
+    math::Vector<double, 9> f = vv.col(8);//默认按从大到小排列
 
     FundamentalMatrix F;
     F(0,0) = f[0]; F(0,1) = f[1]; F(0,2) = f[2];
@@ -84,6 +99,11 @@ FundamentalMatrix fundamental_8_point (math::Matrix<double, 3, 8> const& points1
 
     /* singularity constraint */
     /* todo 奇异值约束*/
+    math::Matrix3d U,S,V;
+    math::matrix_svd<double,3,3>(F, &U, &S , &V);
+    S(2,2) = 0;
+    F = U*S*V.transpose();
+
 
     return F;
 }

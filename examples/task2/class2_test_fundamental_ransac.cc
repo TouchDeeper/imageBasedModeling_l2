@@ -18,6 +18,7 @@
 #include "sfm/fundamental.h"
 #include "sfm/correspondence.h"
 #include "math/matrix_svd.h"
+#include <assert.h>
 
 typedef math::Matrix<double, 3, 3> FundamentalMatrix;
 
