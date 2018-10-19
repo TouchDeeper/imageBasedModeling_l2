@@ -75,7 +75,7 @@ math::Vec3d triangulation(math::Vec2d const & p1
         A(3, i) = p2[1]*P2(2, i) - P2(1, i);
     }
 
-    std::cout<<"A: "<<std::endl;
+    std::cout<<"A: "<<std::endl<<A<<std::endl;
     std::cout<<"A for first pose should be:\n"
              <<"-0.972222 0 0.180123 0\n"
              <<"-0 -0.972222 -0.156584 -0\n"
@@ -120,6 +120,10 @@ bool  is_correct_pose (math::Matrix3d const &R1, math::Vec3d const & t1
       *todo  判断相机姿态是否正确： 三维点在两个相机坐标系的深度(z坐标)同时为正
       *
       */
+    math::Vec3d p3dc1 = R1*p3d+t1;
+    math::Vec3d p3dc2 = R2*p3d+t2;
+    if(p3dc1[2]>0&&p3dc2[2]>0)
+        flag = true;
     return flag;
 }
 
@@ -140,8 +144,9 @@ bool calc_cam_poses(FundamentalMatrix const &F
      * todo 计算本质矩阵
      *
      */
+    E = K2.transpose()*F*K1;
 
-    std::cout<<"EssentialMatrix result is "<<E<<std::endl;
+    std::cout<<"EssentialMatrix result is "<<std::endl<<E<<std::endl;
     std::cout<<"EssentialMatrix should be: \n"
              <<"-0.00490744 -0.0146139 0.34281\n"
              <<"0.0212215 -0.000748851 -0.0271105\n"

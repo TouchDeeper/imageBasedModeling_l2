@@ -40,7 +40,7 @@ int  calc_ransac_iterations (double p,
                            double z = 0.99){
 
 
-    double num_iterations = 0.0;
+    double num_iterations = log(1-z)/log(1-pow(p,K));
     /* 计算迭代次数*/
     return static_cast<int>(math::round(num_iterations));
 
@@ -71,7 +71,7 @@ double  calc_sampson_distance (FundamentalMatrix const& F, sfm::Correspondence2D
     return p2_F_p1 / sum;
 }
 /**
- * \description 8点发估计相机基础矩阵
+ * \description 8点法估计相机基础矩阵
  * @param pset1 -- 第一个视角的特征点
  * @param pset2 -- 第二个视角的特征点
  * @return 估计的基础矩阵
@@ -164,6 +164,12 @@ std::vector<int> find_inliers(sfm::Correspondences2D2D const & matches
 
     std::vector<int> inliers;
     /*todo 判断内点，并将内点索引保存到inliers中*/
+    for (int i = 0; i < matches.size(); ++i) {
+        double d = calc_sampson_distance(F,matches[i]);
+        if(d<squared_thresh)
+            inliers.push_back(i);
+    }
+
     return inliers;
 }
 
@@ -197,7 +203,7 @@ int main(int argc, char *argv[]){
         n_line++;
     }
 
-    /* 计算采用次数 */
+    /* 计算采样次数 */
     const float inlier_ratio =0.5;
     const int n_samples=8;
     int n_iterations = calc_ransac_iterations(inlier_ratio, n_samples);
