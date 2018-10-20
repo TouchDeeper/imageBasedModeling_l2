@@ -75,14 +75,14 @@ FundamentalMatrix fundamental_8_point (math::Matrix<double, 3, 8> const& points1
         double u2 = points2(0,i);
         double v1 = points1(1,i);
         double v2 = points2(1,i);
-        A(i,0) = u1*u2;
-        A(i,1) = u1*v2;
-        A(i,2) = u1;
-        A(i,3) = v1*u2;
-        A(i,4) = v1*v2;
-        A(i,5) = v1;
-        A(i,6) = u2;
-        A(i,7) = v2;
+        A(i,0) = u2*u1;
+        A(i,1) = u2*v1;
+        A(i,2) = u2;
+        A(i,3) = v2*u1;
+        A(i,4) = v2*v1;
+        A(i,5) = v2;
+        A(i,6) = u1;
+        A(i,7) = v1;
         A(i,8) = 1;
     }
 

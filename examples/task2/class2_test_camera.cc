@@ -30,8 +30,8 @@ public:
 
         // 图像坐标系到屏幕坐标系
         math::Vec2d p;
-        p[0] = f_*distort_ratio*x;
-        p[1] = f_*distort_ratio*y;
+        p[0] = f_*distort_ratio*x+c_[0];
+        p[1] = f_*distort_ratio*y+c_[1];
 
         return p;
     }
