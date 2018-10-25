@@ -39,6 +39,7 @@ RansacFundamental::estimate (Correspondences2D2D const& matches, Result* result)
     {
         FundamentalMatrix fundamental;
         this->estimate_8_point(matches, &fundamental);
+
         this->find_inliers(matches, fundamental, &inliers);
         if (inliers.size() > result->inliers.size())
         {
@@ -51,6 +52,7 @@ RansacFundamental::estimate (Correspondences2D2D const& matches, Result* result)
             }
 
             result->fundamental = fundamental;
+
             std::swap(result->inliers, inliers);
             inliers.reserve(matches.size());
         }
@@ -84,9 +86,9 @@ RansacFundamental::estimate_8_point (Correspondences2D2D const& matches,
         pset2(1, i) = match.p2[1];
         pset2(2, i) = 1.0;
     }
-
     /* Compute fundamental matrix using normalized 8-point. */
     sfm::fundamental_8_point(pset1, pset2, fundamental);
+
     sfm::enforce_fundamental_constraints(fundamental);
 }
 

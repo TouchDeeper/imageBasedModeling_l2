@@ -63,7 +63,7 @@ public:
          * down scaled by factors of two. This can be set to -1, which
          * expands the original image by a factor of two.
          */
-         // min_octave设置为-1表示图像需要进行上采样
+         // min_octave设置为-1表示图像
         int min_octave;
 
         /**
@@ -127,7 +127,7 @@ public:
         /** Octave index of the keypoint. Can be negative. */
         int octave;
         /** Sample index. Initally integer in {0 ... S-1}, later in [-1,S]. */
-        float sample;//有效高斯差分的序号
+        float sample;
         /** Keypoint x-coordinate. Initially integer, later sub-pixel. */
         float x;
         /** Keypoint y-coordinate. Initially integer, later sub-pixel. */

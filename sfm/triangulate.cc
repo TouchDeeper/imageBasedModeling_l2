@@ -25,6 +25,9 @@ triangulate_match (Correspondence2D2D const& match,
     pose1.fill_p_matrix(&P1);
     pose2.fill_p_matrix(&P2);
 
+    std::cout<<"P1: "<<P1<<std::endl;
+    std::cout<<"P2: "<<P2<<std::endl;
+
     math::Matrix<double, 4, 4> A;
     for (int i = 0; i < 4; ++i)
     {
@@ -33,6 +36,7 @@ triangulate_match (Correspondence2D2D const& match,
         A(2, i) = match.p2[0] * P2(2, i) - P2(0, i);
         A(3, i) = match.p2[1] * P2(2, i) - P2(1, i);
     }
+    std::cout<<"A: "<<A<<std::endl;
 
     math::Matrix<double, 4, 4> V;
     math::matrix_svd<double, 4, 4>(A, nullptr, nullptr, &V);

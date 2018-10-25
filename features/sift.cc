@@ -428,12 +428,14 @@ Sift::keypoint_localization (void)
 
             //math::Vec3f delta;
             /****************************task-1-1  求解偏移量deta ******************************/
-            /*
-             * 参考第30页slide delta_x的求解方式 delta_x = inv(H)*b
+
+             /* 参考第30页slide delta_x的求解方式 delta_x = inv(H)*b
              * 请在此处给出delta的表达式
+             */
                      /*                  */
                      /*    此处添加代码    */
                      /*                  */
+
             /**********************************************************************************/
 
 
@@ -444,7 +446,7 @@ Sift::keypoint_localization (void)
 
 
             /* Check if accurate location is far away from pixel center. */
-            // dx =0 表示|dx|>0.6f,如果大于的话，就证明离另一个像素点比较近，就用近的像素点重新计算一次
+            // dx =0 表示|dx|>0.6f
             int dx = (delta_x > 0.6f && ix < w-2) * 1 + (delta_x < -0.6f && ix > 1) * -1;
             int dy = (delta_y > 0.6f && iy < h-2) * 1 + (delta_y < -0.6f && iy > 1) * -1;
 
@@ -459,8 +461,6 @@ Sift::keypoint_localization (void)
             /* Accurate location looks good. */
             break;
         }
-
-
 
 
         /* Calcualte function value D(x) at accurate keypoint x. */
@@ -478,11 +478,9 @@ Sift::keypoint_localization (void)
         /*    此处添加代码    */
         /*                  */
         /************************************************************************************/
-
-
-
         float val = dogs[1]->at(ix, iy, 0) + 0.5f * (Dx * delta_x + Dy * delta_y + Ds * delta_s);
         /* Calcualte edge response score Tr(H)^2 / Det(H), see Section 4.1. */
+
          /**************************去除边缘点，参考第33页slide 仔细阅读代码 ****************************/
         float hessian_trace = Dxx + Dyy;
         float hessian_det = Dxx * Dyy - MATH_POW2(Dxy);
@@ -555,6 +553,8 @@ Sift::descriptor_generation (void)
      */
     int octave_index = this->keypoints[0].octave;
     Octave* octave = &this->octaves[octave_index - this->options.min_octave];
+
+    // todo 计算每个octave中所有图像的梯度值和方向，具体得, octave::grad存储图像的梯度响应值，octave::ori存储梯度方向
     this->generate_grad_ori_images(octave);
 
     /* Walk over all keypoints and compute descriptors. */
@@ -582,12 +582,12 @@ Sift::descriptor_generation (void)
         }
 
         /* Orientation assignment. This returns multiple orientations. */
-        //统计直方图找到特征点的几个主方向
+        /* todo 统计直方图找到特征点主方向,找到几个主方向*/
         std::vector<float> orientations;
         orientations.reserve(8);
         this->orientation_assignment(kp, octave, orientations);
 
-        //生成特征向量，同一个特征点可能有多个描述子，为了提升匹配的稳定性
+        /* todo 生成特征向量,同一个特征点可能有多个描述子，为了提升匹配的稳定性*/
         /* Feature vector extraction. */
         for (std::size_t j = 0; j < orientations.size(); ++j)
         {

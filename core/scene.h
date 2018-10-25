@@ -18,8 +18,8 @@
 #include "core/view.h"
 #include "core/bundle.h"
 
-#define MVE_SCENE_VIEWS_DIR "views/"
-#define MVE_SCENE_BUNDLE_FILE "synth_0.out"
+#define CORE_SCENE_VIEWS_DIR "views/"
+#define CORE_SCENE_BUNDLE_FILE "synth_0.out"
 
 CORE_NAMESPACE_BEGIN
 
@@ -40,6 +40,7 @@ public:
 public:
     /** Constructs and loads a scene from the given directory. */
     static Scene::Ptr create (std::string const& path);
+    //static Scene::Ptr New();
 
     Scene(const Scene&) = delete;
     Scene& operator=(const Scene&) = delete;
@@ -111,9 +112,16 @@ inline Scene::Ptr
 Scene::create (std::string const& path)
 {
     Scene::Ptr scene(new Scene);
+    if(path.empty()) return scene;
     scene->load_scene(path);
     return scene;
 }
+
+//Scene::Ptr Scene::New(){
+//   Scene::Ptr scene(new Scene);
+//   return  scene;
+//}
+
 
 inline Scene::ViewList const&
 Scene::get_views (void) const

@@ -40,12 +40,17 @@ public:
         bool success;
     };
 
+    // 稀疏矩阵设置为double类型
     typedef SparseMatrix<double> SparseMatrixType;
+
+    // 向量设置为double类型
     typedef DenseVector<double> DenseVectorType;
 
 public:
     LinearSolver (Options const& options);
 
+
+    // 解正规方程J^TJ delta_x = -J^T f
     /**
      * Solve the system J^T J x = -J^T f based on the bundle adjustment mode.
      * If the Jacobian for cameras is empty, only points are optimized.
@@ -59,6 +64,8 @@ public:
         DenseVectorType* delta_x);
 
 private:
+
+    // 舒尔补
     /**
      * Conjugate Gradient on Schur-complement by exploiting the block
      * structure of H = J^T * J.
@@ -68,6 +75,8 @@ private:
         DenseVectorType const& values,
         DenseVectorType* delta_x);
 
+
+    //block size = 0的时候
     /**
      * J is the Jacobian of the problem. If H = J^T * J has a block diagonal
      * structure (e.g. 'motion only' or 'structure only' problems in BA),

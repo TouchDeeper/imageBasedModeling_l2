@@ -54,7 +54,7 @@ public:
     enum BAMode
     {
         BA_CAMERAS = 1,
-        BA_POINTS = 2,
+        BA_POINTS  = 2,
         BA_CAMERAS_AND_POINTS = 1 | 2
     };
 
@@ -105,6 +105,7 @@ private:
     void sanity_checks (void);
     void lm_optimize (void);
 
+
     /* Helper functions. */
     void compute_reprojection_errors (DenseVectorType* vector_f,
         DenseVectorType const* delta_x = nullptr);
@@ -112,12 +113,14 @@ private:
     void radial_distort (double* x, double* y, double const* dist);
     void rodrigues_to_matrix (double const* r, double* rot);
 
+
     /* Analytic Jacobian. */
     void analytic_jacobian (SparseMatrixType* jac_cam,
-        SparseMatrixType* jac_points);
+                            SparseMatrixType* jac_points);
     void analytic_jacobian_entries (Camera const& cam, Point3D const& point,
         double* cam_x_ptr, double* cam_y_ptr,
         double* point_x_ptr, double* point_y_ptr);
+
 
     /* Update of camera/point parameters. */
     void update_parameters (DenseVectorType const& delta_x);

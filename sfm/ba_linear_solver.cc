@@ -143,22 +143,36 @@ LinearSolver::solve_schur (SparseMatrixType const& jac_cams,
     DenseVectorType const& values, DenseVectorType* delta_x)
 {
     /*
-     * Jacobian J = [ Jc Jp ] with Jc camera block, Jp point block.
-     * Hessian H = [ B E; E^T C ] = J^T J = [ Jc^T; Jp^T ] * [ Jc Jp ]
-     * with  B = Jc^T * Jc  and  E = Jc^T * Jp  and  C = Jp^T Jp
+     *   雅阁比矩阵：
+     *           J = [Jc Jp]
+     *   Jc是与相机相关的模块，Jp是与三维点相关的模块。
+     *   正规方程
+     *          (J^TJ + lambda*I)delta_x = J^T(x - F)
+     *   进一步写为
+     *   [ Jcc+ lambda*Icc   Jcp            ][delta_c]= [v]
+     *   [ Jxp               Jpp+lambda*Ipp ][delta_p]  [w]
+     *
+     *   B = Jcc, E = Jcp, C = Jpp
+     *  其中 Jcc = Jc^T* Jc, Jcx = Jc^T*Jx, Jxc = Jx^TJc, Jxx = Jx^T*Jx
+     *      v = Jc^T(F-x), w = Jx^T(F-x), deta_x = [delta_c; delta_p]
      */
+
+    // 误差向量
     DenseVectorType const& F = values;
+    // 关于相机的雅阁比矩阵
     SparseMatrixType const& Jc = jac_cams;
+    // 关于三维点的雅阁比矩阵
     SparseMatrixType const& Jp = jac_points;
     SparseMatrixType JcT = Jc.transpose();
     SparseMatrixType JpT = Jp.transpose();
 
-    /* Compute the blocks of the Hessian. */
+    // 构造正规方程
     SparseMatrixType B, C;
-    /* Jc^T * Jc */
+    // B = Jc^T* Jc
     matrix_block_column_multiply(Jc, this->opts.camera_block_dim, &B);
-    /* Jp^T * Jp */
+    // C = Jp^T*Jp
     matrix_block_column_multiply(Jp, 3, &C);
+    // E = Jc^T*Jp
     SparseMatrixType E = JcT.multiply(Jp);
 
     /* Assemble two values vectors. */
@@ -167,20 +181,23 @@ LinearSolver::solve_schur (SparseMatrixType const& jac_cams,
     v.negate_self();
     w.negate_self();
 
-    /* Save diagonal for computing predicted error decrease */
-    SparseMatrixType B_diag = B.diagonal_matrix();
-    SparseMatrixType C_diag = C.diagonal_matrix();
+    /* 以矩阵B和C的对角元素重新构建对角阵*/
+//    SparseMatrixType B_diag = B.diagonal_matrix();
+//    SparseMatrixType C_diag = C.diagonal_matrix();
 
-    /* Add regularization to C and B. */
+    /* 添加信赖域 */
     C.mult_diagonal(1.0 + 1.0 / this->opts.trust_region_radius);
     B.mult_diagonal(1.0 + 1.0 / this->opts.trust_region_radius);
 
-    /* Invert C matrix. */
+    /* 求解C矩阵的逆C = inv(Jx^T+Jx + lambda*Ixx)*/
     invert_block_matrix_3x3_inplace(&C);
 
-    /* Compute the Schur complement matrix S. */
+    /* 计算S矩阵的Schur补用于高斯消元. */
     SparseMatrixType ET = E.transpose();
+
+    // S = (Jcc+lambda*Icc) - Jc^T*Jx*inv(Jxx+ lambda*Ixx)*Jx^T*Jc
     SparseMatrixType S = B.subtract(E.multiply(C).multiply(ET));
+    // rhs = v -  Jc^T*Jx*inv(Jxx+ lambda*Ixx)*w
     DenseVectorType rhs = v.subtract(E.multiply(C.multiply(w)));
 
     /* Compute pre-conditioner for linear system. */
@@ -189,7 +206,7 @@ LinearSolver::solve_schur (SparseMatrixType const& jac_cams,
     SparseMatrixType precond = B;
     invert_block_matrix_NxN_inplace(&precond, this->opts.camera_block_dim);
 
-    /* Solve linear system. */
+    /* 用共轭梯度法求解相机参数. */
     DenseVectorType delta_y(Jc.num_cols());
     typedef sfm::ba::ConjugateGradient<double> CGSolver;
     CGSolver::Options cg_opts;
@@ -217,7 +234,8 @@ LinearSolver::solve_schur (SparseMatrixType const& jac_cams,
             break;
     }
 
-    /* Substitute back to obtain delta z. */
+    /* 将相机参数带入到第二个方程中，求解三维点的参数. */
+    /*E= inv(Jp^T Jp) (JpT.multiply(F)-Jc^T * Jp * delta_y)*/
     DenseVectorType delta_z = C.multiply(w.subtract(ET.multiply(delta_y)));
 
     /* Fill output vector. */
@@ -233,11 +251,11 @@ LinearSolver::solve_schur (SparseMatrixType const& jac_cams,
         delta_x->at(jac_cam_cols + i) = delta_z[i];
 
     /* Compute predicted error decrease */
-    status.predicted_error_decrease = 0.0;
-    status.predicted_error_decrease += delta_y.dot(B_diag.multiply(
-        delta_y).multiply(1.0 / this->opts.trust_region_radius).add(v));
-    status.predicted_error_decrease += delta_z.dot(C_diag.multiply(
-        delta_z).multiply(1.0 / this->opts.trust_region_radius).add(w));
+//    status.predicted_error_decrease = 0.0;
+//    status.predicted_error_decrease += delta_y.dot(B_diag.multiply(
+//        delta_y).multiply(1.0 / this->opts.trust_region_radius).add(v));
+//    status.predicted_error_decrease += delta_z.dot(C_diag.multiply(
+//        delta_z).multiply(1.0 / this->opts.trust_region_radius).add(w));
 
     return status;
 }
