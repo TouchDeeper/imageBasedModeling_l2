@@ -54,6 +54,7 @@ Tracks::compute (PairwiseMatching const& matching,
     for (std::size_t i = 0; i < viewports->size(); ++i)
     {
         Viewport& viewport = viewports->at(i);
+        //每个viewport的tracks理论上与检测到的特征点的个数一致
         viewport.track_ids.resize(viewport.features.positions.size(), -1);
     }
 

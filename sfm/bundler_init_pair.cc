@@ -196,6 +196,7 @@ InitialPair::compute_candidate_pairs (CandidatePairs* candidates)
                 int v2id = track.features[k].view_id;
                 int f1id = track.features[j].feature_id;
                 int f2id = track.features[k].feature_id;
+                //根据图像的id进行排序
                 if (v1id > v2id) {
                     std::swap(v1id, v2id);
                     std::swap(f1id, f2id);
