@@ -121,7 +121,7 @@ InitialPair::compute_pair (Result* result)
     /* Return if a pair satisfying all thresholds has been found. */
     if (found_pair)
         return;
-
+    //如果没有找到满足所有条件的匹配图像对,则选一个评分高的作为匹配图像对
     /* Return pair with best score (larger than 0.0). */
     std::cout << "Searching for pair with best score..." << std::endl;
     float best_score = 0.0f;
@@ -196,12 +196,12 @@ InitialPair::compute_candidate_pairs (CandidatePairs* candidates)
                 int v2id = track.features[k].view_id;
                 int f1id = track.features[j].feature_id;
                 int f2id = track.features[k].feature_id;
-                //根据图像的id进行排序
+                //防止（v1,v2）和（v2,v1）这种匹配图像对重复计算根据图像的id进行排序
                 if (v1id > v2id) {
                     std::swap(v1id, v2id);
                     std::swap(f1id, f2id);
                 }
-
+                //二维查表的形式
                 /* Lookup pair. */
                 int const lookup_id = v1id * num_viewports + v2id;
                 int pair_id = candidate_lookup[lookup_id];

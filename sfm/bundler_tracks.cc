@@ -79,7 +79,7 @@ Tracks::compute (PairwiseMatching const& matching,
             if (view1_tid == -1 && view2_tid == -1)
             {
                 /* No track ID associated with the match. Create track. */
-                viewport1.track_ids[idx.first] = tracks->size();
+                viewport1.track_ids[idx.first] = tracks->size();//创建一个新的track，那这个track在tracks中的编号就是tracks的大小
                 viewport2.track_ids[idx.second] = tracks->size();
                 tracks->push_back(Track());
                 tracks->back().features.push_back(
