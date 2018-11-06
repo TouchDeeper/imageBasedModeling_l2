@@ -2,28 +2,36 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="ImageBasedModellingEdu" targetName="class5_scene2pset_single_view" />
-      <config projectName="ImageBasedModellingEdu" targetName="task3_test_jacobian" />
-      <config projectName="ImageBasedModellingEdu" targetName="task3_test_p3p" />
-      <config projectName="ImageBasedModellingEdu" targetName="task5_dmrecon_multi_views" />
+      <config projectName="ImageBasedModellingEdu" targetName="task3_test_lm_optimize" />
       <config projectName="ImageBasedModellingEdu" targetName="sfm" />
       <config projectName="ImageBasedModellingEdu" targetName="task2_test_pose_from_fundamental" />
-      <config projectName="ImageBasedModellingEdu" targetName="task3_test_ba" />
-      <config projectName="ImageBasedModellingEdu" targetName="core" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_math_basic" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_ransac" />
-      <config projectName="ImageBasedModellingEdu" targetName="task4_incremental_sfm" />
-      <config projectName="ImageBasedModellingEdu" targetName="task5_dmrecon_single_view" />
-      <config projectName="ImageBasedModellingEdu" targetName="mvs" />
-      <config projectName="ImageBasedModellingEdu" targetName="task1_test_features" />
-      <config projectName="ImageBasedModellingEdu" targetName="task3_test_triangle" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_8_point" />
-      <config projectName="ImageBasedModellingEdu" targetName="task2_test_camera_model" />
       <config projectName="ImageBasedModellingEdu" targetName="class5_scene2pset_multi_views" />
-      <config projectName="ImageBasedModellingEdu" targetName="util" />
-      <config projectName="ImageBasedModellingEdu" targetName="task3_test_lm_optimize" />
-      <config projectName="ImageBasedModellingEdu" targetName="task1_test_matching" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_ransac" />
+      <config projectName="ImageBasedModellingEdu" targetName="task6_surface_reconstruction" />
+      <config projectName="ImageBasedModellingEdu" targetName="task3_test_jacobian" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_fundamental_8_point" />
+      <config projectName="ImageBasedModellingEdu" targetName="coldet" />
+      <config projectName="ImageBasedModellingEdu" targetName="task5_dmrecon_multi_views" />
+      <config projectName="ImageBasedModellingEdu" targetName="task3_test_triangle" />
+      <config projectName="ImageBasedModellingEdu" targetName="core" />
+      <config projectName="ImageBasedModellingEdu" targetName="task5_dmrecon_single_view" />
       <config projectName="ImageBasedModellingEdu" targetName="features" />
+      <config projectName="ImageBasedModellingEdu" targetName="task4_incremental_sfm" />
+      <config projectName="ImageBasedModellingEdu" targetName="util" />
+      <config projectName="ImageBasedModellingEdu" targetName="gco" />
+      <config projectName="ImageBasedModellingEdu" targetName="task3_test_ba" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_camera_model" />
+      <config projectName="ImageBasedModellingEdu" targetName="task7_texturing" />
+      <config projectName="ImageBasedModellingEdu" targetName="task2_test_math_basic" />
+      <config projectName="ImageBasedModellingEdu" targetName="mrf" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_features" />
+      <config projectName="ImageBasedModellingEdu" targetName="surface" />
+      <config projectName="ImageBasedModellingEdu" targetName="texturing" />
+      <config projectName="ImageBasedModellingEdu" targetName="task7_mesh_clean" />
+      <config projectName="ImageBasedModellingEdu" targetName="task1_test_matching" />
+      <config projectName="ImageBasedModellingEdu" targetName="task3_test_p3p" />
+      <config projectName="ImageBasedModellingEdu" targetName="mvs" />
+      <config projectName="ImageBasedModellingEdu" targetName="class5_scene2pset_single_view" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -32,7 +40,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cedd6e8e-c647-4472-84f0-1b9ba5ebe9a6" name="Default" comment="" />
+    <list default="true" id="cedd6e8e-c647-4472-84f0-1b9ba5ebe9a6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/examples/task4/class4_test_incremental_sfm.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2185">
-              <caret line="341" column="5" lean-forward="true" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
+              <caret line="341" column="5" lean-forward="false" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -67,8 +77,8 @@
       <file leaf-file-name="class5_scene2pset_single_view.cc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/task5/class5_scene2pset_single_view.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5292">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="313" column="0" lean-forward="true" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -197,19 +207,6 @@
               <item name="ImageBasedModellingEdu" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="sequence" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ImageBasedModellingEdu" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ImageBasedModellingEdu" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ImageBasedModellingEdu" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
               <item name="task5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -244,16 +241,28 @@
     <configuration name="class5_scene2pset_single_view" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="class5_scene2pset_single_view" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="class5_scene2pset_single_view">
       <envs />
     </configuration>
+    <configuration name="coldet" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="coldet" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
     <configuration name="core" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="core" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task4_incremental_sfm">
       <envs />
     </configuration>
     <configuration name="features" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="features" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task4_incremental_sfm">
       <envs />
     </configuration>
+    <configuration name="gco" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="gco" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="mrf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="mrf" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
     <configuration name="mvs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="mvs" CONFIG_NAME="Debug">
       <envs />
     </configuration>
     <configuration name="sfm" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="sfm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task4_incremental_sfm">
+      <envs />
+    </configuration>
+    <configuration name="surface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="surface" CONFIG_NAME="Debug">
       <envs />
     </configuration>
     <configuration name="task1_test_features" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/../../../../OneDrive - mail.scut. edu.cn/imageBasedModeling/L2/ImageBasedModellingEdu/" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task1_test_features" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task4_incremental_sfm">
@@ -292,13 +301,25 @@
     <configuration name="task3_test_triangle" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task3_test_triangle" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task4_incremental_sfm">
       <envs />
     </configuration>
-    <configuration name="task4_incremental_sfm" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/sequence/ ./examples/data/output/" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task4_incremental_sfm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task4_incremental_sfm">
+    <configuration name="task4_incremental_sfm" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/sequence/ ./examples/data/sequence_scene/" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task4_incremental_sfm" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task4_incremental_sfm">
       <envs />
     </configuration>
     <configuration name="task5_dmrecon_multi_views" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task5_dmrecon_multi_views" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task5_dmrecon_multi_views">
       <envs />
     </configuration>
-    <configuration name="task5_dmrecon_single_view" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/output/ 2 0" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task5_dmrecon_single_view" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task5_dmrecon_single_view">
+    <configuration name="task5_dmrecon_single_view" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./examples/data/sequence_scene/ 2 0" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task5_dmrecon_single_view" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task5_dmrecon_single_view">
+      <envs />
+    </configuration>
+    <configuration name="task6_surface_reconstruction" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task6_surface_reconstruction" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task6_surface_reconstruction">
+      <envs />
+    </configuration>
+    <configuration name="task7_mesh_clean" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task7_mesh_clean" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task7_mesh_clean">
+      <envs />
+    </configuration>
+    <configuration name="task7_texturing" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="task7_texturing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ImageBasedModellingEdu" RUN_TARGET_NAME="task7_texturing">
+      <envs />
+    </configuration>
+    <configuration name="texturing" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="texturing" CONFIG_NAME="Debug">
       <envs />
     </configuration>
     <configuration name="util" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="util" CONFIG_NAME="Debug">
@@ -362,30 +383,38 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="23">
+    <list size="31">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
-      <item index="1" class="java.lang.String" itemvalue="Application.core" />
-      <item index="2" class="java.lang.String" itemvalue="Application.task1_test_features" />
-      <item index="3" class="java.lang.String" itemvalue="Application.task1_test_matching" />
-      <item index="4" class="java.lang.String" itemvalue="Application.task2_test_camera_model" />
-      <item index="5" class="java.lang.String" itemvalue="Application.task2_test_fundamental_8_point" />
-      <item index="6" class="java.lang.String" itemvalue="Application.task2_test_fundamental_ransac" />
-      <item index="7" class="java.lang.String" itemvalue="Application.task2_test_math_basic" />
-      <item index="8" class="java.lang.String" itemvalue="Application.task2_test_pose_from_fundamental" />
-      <item index="9" class="java.lang.String" itemvalue="Application.task3_test_ba" />
-      <item index="10" class="java.lang.String" itemvalue="Application.task3_test_jacobian" />
-      <item index="11" class="java.lang.String" itemvalue="Application.task3_test_lm_optimize" />
-      <item index="12" class="java.lang.String" itemvalue="Application.task3_test_p3p" />
-      <item index="13" class="java.lang.String" itemvalue="Application.task3_test_triangle" />
-      <item index="14" class="java.lang.String" itemvalue="Application.task4_incremental_sfm" />
-      <item index="15" class="java.lang.String" itemvalue="Application.class5_scene2pset_multi_views" />
-      <item index="16" class="java.lang.String" itemvalue="Application.class5_scene2pset_single_view" />
-      <item index="17" class="java.lang.String" itemvalue="Application.task5_dmrecon_multi_views" />
-      <item index="18" class="java.lang.String" itemvalue="Application.task5_dmrecon_single_view" />
-      <item index="19" class="java.lang.String" itemvalue="Application.features" />
-      <item index="20" class="java.lang.String" itemvalue="Application.mvs" />
-      <item index="21" class="java.lang.String" itemvalue="Application.sfm" />
-      <item index="22" class="java.lang.String" itemvalue="Application.util" />
+      <item index="1" class="java.lang.String" itemvalue="Application.coldet" />
+      <item index="2" class="java.lang.String" itemvalue="Application.gco" />
+      <item index="3" class="java.lang.String" itemvalue="Application.mrf" />
+      <item index="4" class="java.lang.String" itemvalue="Application.core" />
+      <item index="5" class="java.lang.String" itemvalue="Application.task1_test_features" />
+      <item index="6" class="java.lang.String" itemvalue="Application.task1_test_matching" />
+      <item index="7" class="java.lang.String" itemvalue="Application.task2_test_camera_model" />
+      <item index="8" class="java.lang.String" itemvalue="Application.task2_test_fundamental_8_point" />
+      <item index="9" class="java.lang.String" itemvalue="Application.task2_test_fundamental_ransac" />
+      <item index="10" class="java.lang.String" itemvalue="Application.task2_test_math_basic" />
+      <item index="11" class="java.lang.String" itemvalue="Application.task2_test_pose_from_fundamental" />
+      <item index="12" class="java.lang.String" itemvalue="Application.task3_test_ba" />
+      <item index="13" class="java.lang.String" itemvalue="Application.task3_test_jacobian" />
+      <item index="14" class="java.lang.String" itemvalue="Application.task3_test_lm_optimize" />
+      <item index="15" class="java.lang.String" itemvalue="Application.task3_test_p3p" />
+      <item index="16" class="java.lang.String" itemvalue="Application.task3_test_triangle" />
+      <item index="17" class="java.lang.String" itemvalue="Application.task4_incremental_sfm" />
+      <item index="18" class="java.lang.String" itemvalue="Application.class5_scene2pset_multi_views" />
+      <item index="19" class="java.lang.String" itemvalue="Application.class5_scene2pset_single_view" />
+      <item index="20" class="java.lang.String" itemvalue="Application.task5_dmrecon_multi_views" />
+      <item index="21" class="java.lang.String" itemvalue="Application.task5_dmrecon_single_view" />
+      <item index="22" class="java.lang.String" itemvalue="Application.task6_surface_reconstruction" />
+      <item index="23" class="java.lang.String" itemvalue="Application.task7_mesh_clean" />
+      <item index="24" class="java.lang.String" itemvalue="Application.task7_texturing" />
+      <item index="25" class="java.lang.String" itemvalue="Application.features" />
+      <item index="26" class="java.lang.String" itemvalue="Application.mvs" />
+      <item index="27" class="java.lang.String" itemvalue="Application.sfm" />
+      <item index="28" class="java.lang.String" itemvalue="Application.surface" />
+      <item index="29" class="java.lang.String" itemvalue="Application.texturing" />
+      <item index="30" class="java.lang.String" itemvalue="Application.util" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -408,12 +437,12 @@
       <workItem from="1541251349668" duration="1918000" />
       <workItem from="1541334328296" duration="258000" />
       <workItem from="1541400856370" duration="9374000" />
-      <workItem from="1541472057950" duration="786000" />
+      <workItem from="1541472057950" duration="2763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32231000" />
+    <option name="totallyTimeSpent" value="34208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -423,7 +452,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -824,15 +853,15 @@
     <entry file="file://$PROJECT_DIR$/examples/task4/class4_test_incremental_sfm.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2185">
-          <caret line="341" column="5" lean-forward="true" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
+          <caret line="341" column="5" lean-forward="false" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/task5/class5_scene2pset_single_view.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5292">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="313" column="0" lean-forward="true" selection-start-line="313" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
           <folding />
         </state>
       </provider>
